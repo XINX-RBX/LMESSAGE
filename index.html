@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Message For You ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .box {
+            width: 100%;
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 30px 22px;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        button {
+            border: none;
+            padding: 14px 22px;
+            margin: 8px;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .yes {
+            background: white;
+            color: #ff4f81;
+        }
+
+        .no {
+            background: rgba(255,255,255,0.25);
+            color: white;
+        }
+
+        #message {
+            display: none;
+        }
+
+        #answer {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <div id="start">
+        <h1>💌 Hey...</h1>
+
+        <p>
+            I made something for you.
+            <br>
+            Please read it when you have a moment ❤️
+        </p>
+
+        <button class="yes" onclick="showMessage()">
+            Open 💌
+        </button>
+    </div>
+
+
+    <div id="message">
+
+        <h1>❤️ One More Chance?</h1>
+
+        <p>
+            I know things didn't work out between us,
+            and I know I wasn't always the best at showing
+            how I felt.
+        </p>
+
+        <p>
+            I'm sorry for the times I seemed nonchalant
+            or made you feel like I didn't care.
+            That wasn't what I wanted.
+        </p>
+
+        <p>
+            The truth is, I still care about you a lot.
+            I miss talking to you, laughing with you,
+            and all the little moments we shared. 🥲❤️
+        </p>
+
+        <p>
+            I'm not asking you to forget everything that happened.
+            I'm not trying to pressure you either.
+        </p>
+
+        <p>
+            I just wanted to be honest about how I feel...
+        </p>
+
+        <h2>
+            Would you consider giving us another chance? ❤️
+        </h2>
+
+        <button class="yes" onclick="yesAnswer()">
+            Yes ❤️
+        </button>
+
+        <button class="no" onclick="noAnswer()">
+            No 💔
+        </button>
+
+        <div id="answer"></div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+    function showMessage() {
+        document.getElementById("start").style.display = "none";
+        document.getElementById("message").style.display = "block";
+    }
+
+    function yesAnswer() {
+        document.getElementById("answer").innerHTML =
+        "🥹❤️ Thank you. Let's take things slowly and try to do better this time.";
+    }
+
+    function noAnswer() {
+        document.getElementById("answer").innerHTML =
+        "I understand ❤️ Thank you for reading this. I respect your decision and I'm grateful for the memories we shared.";
+    }
+
+</script>
+
+</body>
+</html>
